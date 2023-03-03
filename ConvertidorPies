@@ -1,0 +1,37 @@
+Private Sub CommandButton1_Click() ' Se inicia el procedimiento
+    ' Declaracion de variables
+        Dim Pies As Currency ' Se declara variable de entrada
+        Dim Pulgadas As Currency ' Se declara variable de salida
+        Dim Yardas As Currency ' Se declara variable de salida
+        Dim Cm As Currency ' Se declara variable de salida
+        Dim Mt As Currency ' Se declara variable de salida
+    
+    ' Solicitar - Leer datos de entrada
+
+        Pies = TextBox1 ' Se leen datos de entrada
+    ' Realizacion de calculos
+        Yardas = Pies / 3 ' Se realiza conversion de pies a yardas
+        Pulgadas = Pies * 12 ' Se realiza conversion de pies a pulgadas
+        Cm = Pulgadas * 2.54 ' Se realiza conversion pulgadas a centimetros
+        Mt = Cm / 100 ' Se realiza conversion centimetros a metros
+    
+    ' Se mostraran resultados en etiquetas
+' Label5.Caption = PULGADAS ' Se muestra resultado pulgadas
+' Label10.Caption = YARDAS ' Se muestra resultado yardas
+' Label11.Caption = CENTIMETROS ' Se muestra resultado centimetros
+' Label12.Caption = METROS ' Se muestra resultado metros
+
+    ' Se mostraran resultados en cajas de texto
+TextBox2 = Pulgadas ' Se muestra resultado pulgadas
+TextBox3 = Cm ' Se muestra resultado centimetros
+TextBox4 = Mt ' Se muestra resultado metros
+TextBox5 = Yardas ' Se muestra resultado yardas
+End Sub
+    ' Configuracion del boton "Salir"
+Private Sub CommandButton2_Click()
+    Unload Me
+End Sub
+
+Private Sub Workbook_Open()
+    MsgBox "Tarea #12 Convertidor a Pies"
+End Sub
